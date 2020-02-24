@@ -22,15 +22,9 @@
   <!-- Label and input for body end -->
 
   <!-- Label and input for author_id start -->
-  <div class="form-group">
-    <label for="author_id">
-      Author
-    </label>
-
-    <!-- Input for author_id start -->
-    <%= select_tag(:author_id, options_from_collection_for_select(User.all, :id, :created_at, @comment.author_id), :class => "form-control") %>
-    <!-- Input for author_id end -->
-  </div>
+  <!-- Input for "author_id" start -->
+  <input type="hidden" name="author_id" value="<%= current_user.id %>">
+  <!-- Input for "author_id" end -->
   <!-- Label and input for author_id end -->
 
   <!-- Label and input for photo_id start -->
