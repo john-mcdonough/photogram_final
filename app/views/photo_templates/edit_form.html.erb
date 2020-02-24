@@ -21,15 +21,6 @@
   <!-- Label and input for caption end -->
 
   <!-- Label and input for owner_id start -->
-  <div class="form-group">
-    <label for="owner_id">
-      Owner
-    </label>
-
-    <!-- Input for owner_id start -->
-    <%= select_tag(:owner_id, options_from_collection_for_select(User.all, :id, :created_at, @photo.owner_id), :class => "form-control") %>
-    <!-- Input for owner_id end -->
-  </div>
   <!-- Label and input for owner_id end -->
 
   <button class="btn btn-block btn-outline-secondary">

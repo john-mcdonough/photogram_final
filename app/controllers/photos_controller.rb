@@ -44,7 +44,7 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params.fetch("id_to_modify"))
 
     @photo.caption = params.fetch("caption")
-    @photo.owner_id = params.fetch("owner_id")
+    
 
     if @photo.valid?
       @photo.save
