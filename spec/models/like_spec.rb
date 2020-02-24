@@ -4,6 +4,8 @@ RSpec.describe Like, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:fan) }
+
     it { should belong_to(:photo) }
 
     end
