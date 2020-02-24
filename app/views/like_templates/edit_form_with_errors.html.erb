@@ -36,7 +36,7 @@
     </label>
 
     <!-- Input for fan_id start -->
-    <input type="text" id="fan_id" name="fan_id" class="form-control" value="<%= @like.fan_id %>">
+    <%= select_tag(:fan_id, options_from_collection_for_select(User.all, :id, :created_at, @like.fan_id), :class => "form-control") %>
     <!-- Input for fan_id end -->
   </div>
   <!-- Label and input for fan_id end -->
