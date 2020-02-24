@@ -12,6 +12,10 @@ class Photo < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :fans,
+             :through => :likes,
+             :source => :fan
+
   has_many   :commenters,
              :through => :comments,
              :source => :author
