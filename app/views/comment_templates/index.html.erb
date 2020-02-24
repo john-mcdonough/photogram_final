@@ -68,13 +68,21 @@
 
         <!-- Display comment.author_id start -->
         <td>
-          <%= comment.author.created_at %>
+          <% if comment.author.present? %>
+            <a href="/users/<%= comment.author.id %>">
+              <%= comment.author.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display comment.author_id end -->
 
         <!-- Display comment.photo_id start -->
         <td>
-          <%= comment.photo.caption %>
+          <% if comment.photo.present? %>
+            <a href="/photos/<%= comment.photo.id %>">
+              <%= comment.photo.caption %>
+            </a>
+          <% end %>
         </td>
         <!-- Display comment.photo_id end -->
 

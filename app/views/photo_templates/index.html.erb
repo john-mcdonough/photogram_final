@@ -64,7 +64,11 @@
 
         <!-- Display photo.owner_id start -->
         <td>
-          <%= photo.owner.created_at %>
+          <% if photo.owner.present? %>
+            <a href="/users/<%= photo.owner.id %>">
+              <%= photo.owner.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display photo.owner_id end -->
 
