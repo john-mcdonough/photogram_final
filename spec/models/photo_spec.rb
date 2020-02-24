@@ -14,6 +14,8 @@ RSpec.describe Photo, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:viewers) }
+
     end
 
     describe "Validations" do
