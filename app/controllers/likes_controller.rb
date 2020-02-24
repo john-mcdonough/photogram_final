@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
   def index
-    @likes = Like.all
+    @likes = Like.page(params[:page]).per(10)
 
     render("like_templates/index.html.erb")
   end
