@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link like start -->
       <div class="col">
         <a href="/likes/<%= @like.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit like
         </a>
       </div>
-      <!-- Edit link like end -->
 
-      <!-- Delete link like start -->
       <div class="col">
         <a href="/delete_like/<%= @like.id %>" class="btn btn-block btn-outline-secondary">
           Delete like
         </a>
       </div>
-      <!-- Delete link like end -->
     </div>
 
     <dl>
       <dt>
         Photo
       </dt>
-      <!-- Display photo_id start -->
       <dd>
         <% if @like.photo.present? %>
           <a href="/photos/<%= @like.photo_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display photo_id end -->
 
       <dt>
         Fan
       </dt>
-      <!-- Display fan_id start -->
       <dd>
         <% if @like.fan.present? %>
           <a href="/users/<%= @like.fan_id %>">
@@ -53,28 +46,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display fan_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@like.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@like.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

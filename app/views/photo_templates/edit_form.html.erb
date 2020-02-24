@@ -4,24 +4,16 @@
 
 <hr>
 
-<!-- Form photo start -->
 <form action="/update_photo/<%= @photo.id %>" method="post">
-<!-- Form photo end -->
 
-  <!-- Label and input for caption start -->
   <div class="form-group">
     <label for="caption">
       Caption
     </label>
 
-    <!-- Input for caption start -->
     <textarea id="caption" name="caption" class="form-control" rows="3"><%= @photo.caption %></textarea>
-    <!-- Input for caption end -->
   </div>
-  <!-- Label and input for caption end -->
 
-  <!-- Label and input for owner_id start -->
-  <!-- Label and input for owner_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update photo
