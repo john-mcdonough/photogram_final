@@ -4,6 +4,8 @@ RSpec.describe Photo, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:owner) }
+
     it { should have_many(:comments) }
 
     it { should have_many(:likes) }
